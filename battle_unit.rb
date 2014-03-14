@@ -1,26 +1,30 @@
 class BattleUnit
-  def initialize 
+  def initialize(team)
     @hit_points = 20
-    @attack = 5
-    @defense = 3
+    @attack = 4
+    @defense = 2
     @damage = 0
-    @level = 0
+    @team = team
+  end
+  
+  def team_name
+    @team
   end
   
   def hit_points
-    @hit_points + @level
+    @hit_points 
   end
   
   def attack
-    @attack + @level
+    @attack
   end
   
   def defense
-    @defense + @level
+    @defense
   end
   
   def speed
-    @speed + @level
+    @speed
   end
   
   def damage

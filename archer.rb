@@ -12,10 +12,3 @@ class Archer < BattleUnit
     @defense - 2
   end
 end
-
-archer = Archer.new
-
-archer2 = Archer.new
-archer2.attack_target(archer)
-puts archer.damage
-puts archer2.damage

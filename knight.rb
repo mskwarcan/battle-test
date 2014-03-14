@@ -1,5 +1,5 @@
 require './battle_unit.rb'
-class Archer < BattleUnit
+class Knight < BattleUnit
   def hit_points 
     @hit_points + 15
   end

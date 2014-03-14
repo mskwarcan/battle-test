@@ -1,11 +1,11 @@
 require './battle_unit.rb'
-class Archer < BattleUnit
+class Healer < BattleUnit
   def hit_points 
     @hit_points - 5
   end
   
   def attack
-    0
+    @attack - 3
   end
   
   def defense
