@@ -1,14 +1,14 @@
 require './battle.rb'
 
-#puts "Please choose a name for Team 1:"  
-#STDOUT.flush  
-#team_one_name = gets.chomp
+puts "Please choose a name for Team 1:"  
+STDOUT.flush  
+team_one_name = gets.chomp
 
-#puts "Please choose a name for Team 2:"  
-#STDOUT.flush  
-#team_two_name = gets.chomp
+puts "Please choose a name for Team 2:"  
+STDOUT.flush  
+team_two_name = gets.chomp
 
-@battle = Battle.new("mike", "joe")
+@battle = Battle.new(team_one_name, team_two_name)
 @turn_number = 0
 
 while @battle.game_is_not_over do

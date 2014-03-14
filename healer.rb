@@ -5,7 +5,7 @@ class Healer < BattleUnit
   end
   
   def attack
-    @attack - 3
+    @attack
   end
   
   def defense

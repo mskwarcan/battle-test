@@ -35,10 +35,23 @@ class BattleUnit
     unit.attacked(self.attack)
   end
   
+  def heal_target(unit)
+    unit.healed(self.attack)
+  end
+  
   def attacked(dmg)
     dmg = dmg - self.defense
     if dmg > 0
       @damage = @damage + dmg
+    end
+  end
+  
+  def healed(heal)
+    if self.damage > 0
+      @damage = @damage + heal
+      if @damage < 0
+        @damage = 0
+      end
     end
   end
   

@@ -22,23 +22,30 @@ class Battle
   def time_to_attack(order)
     order.each do |unit|
       if unit.team_name == @team_one.team_name
-        team = @team_two
+        opposite_team = @team_two
+        my_team = @team_one
       else
-        team = @team_one
-      end
-      target = team.random_target
-      
-      if target.nil?
-        break
+        opposite_team = @team_one
+        my_team = @team_two
       end
       
-      unit.attack_target(target)
-      
-      #if target dies, remove them from the turn order
-      if target.dead?
-        order.delete(target)
-        team.remove_dead
-      end
+      if unit.class == "Healer"
+        target = my_team.random_target
+        unit.heal_target(target)
+      else
+        target = opposite_team.random_target
+        if target.nil?
+          break
+        end
+        unit.attack_target(target)
+        
+        #if target dies, remove them from the turn order
+        if target.dead?
+          order.delete(target)
+          opposite_team.remove_dead
+        end
+        
+      end 
     end
   end
   
