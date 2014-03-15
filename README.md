@@ -8,10 +8,10 @@ There are two armies, and each one must battle each other until there is a winne
 
 All classes have 4 basic attributes.
 
-*Hit Points: Amount of damage that can be taken before dying
-*Attack: Amount of damage they do when attacking
-*Defense: Amount of damage reduced when attacked
-*Damage: Amount of damage taken thus far
+* Hit Points: Amount of damage that can be taken before dying
+* Attack: Amount of damage they do when attacking
+* Defense: Amount of damage reduced when attacked
+* Damage: Amount of damage taken thus far
 
 There are 5 classes. Generic Battle Unit, Knight, Archer, Healer, and Catapult.
 
@@ -24,35 +24,36 @@ All units start with 0 damage taken.
 ###Foot Soldier
 
 This is the default unit.
-Hit points: 20
-Attack: 4
-Defense: 2
+
+* Hit points: 20
+* Attack: 4
+* Defense: 2
 
 ###Archer
 
-Hit points: 10
-Attack: 6
-Defense: 0
+* Hit points: 10
+* Attack: 6
+* Defense: 0
 
 ###Knight
 
-Hit points: 25
-Attack: 5
-Defense: 3
+* Hit points: 25
+* Attack: 5
+* Defense: 3
 
 ###Healer
 
 This is a unique class when compared to the others. Instead of doing damage to the other team, it attempts to heal someone on their own team for 5 damage. A unit cannot have less then 0 damage.
 
-Hit points: 15
-Heal: 5
-Defense: 1
+* Hit points: 15
+* Heal: 5
+* Defense: 1
 
 ###Catapult
 
-Hit points: 50
-Attack: 14
-Defense: 3
+* Hit points: 50
+* Attack: 14
+* Defense: 3
 
 ##Battle
 
@@ -63,6 +64,8 @@ Once the attack order has been decided, it starts at the beginning and has that 
 Attacking Unit's Attack Stat - Defending Unit's Defense Stat = Damage Dealt
 
 A check is then performed to see if that unit's total damage taken is more than the units hit points. If it has taken more damage than hit points, that unit is removed from the game and the attack order. No zombies in this game!
+
+In the special case of healers, instead of choosing a random unit from the other team, they choose a random unit from their own team. This unit then has up to 5 damage removed from it. If the unit has less then 5 damage on it, the damage is simply set to 0.
 
 After each round, a battle summary is printed to the screen that let's you know what turn it is and how many units each army has left.
 
