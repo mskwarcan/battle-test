@@ -23,10 +23,6 @@ class BattleUnit
     @defense
   end
   
-  def speed
-    @speed
-  end
-  
   def damage
     @damage
   end

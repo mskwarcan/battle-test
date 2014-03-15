@@ -9,6 +9,6 @@ class Catapult < BattleUnit
   end
   
   def defense
-    @defense + 2
+    @defense + 1
   end
 end

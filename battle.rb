@@ -44,7 +44,6 @@ class Battle
           order.delete(target)
           opposite_team.remove_dead
         end
-        
       end 
     end
   end
