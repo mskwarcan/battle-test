@@ -57,6 +57,8 @@ This is a unique class when compared to the others. Instead of doing damage to t
 
 ##Battle
 
+While in the folder, simply run ruby battle_test.rb to start the battle!
+
 When the battle starts, you are prompted to give each team a name. After the 2 teams are assigned names, their army is automatically generated. Once each team has been generated, the teams are combined and shuffled in order to provide the attack order. This is done at the beginning of every turn.
 
 Once the attack order has been decided, it starts at the beginning and has that unit randomly select a unit on the other team. Damage is calculated using the following formula:
